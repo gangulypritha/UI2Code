@@ -7,6 +7,8 @@ This PyTorch codebase has used Timo Angerer and Marvin Knoll (@[marvinknoll](htt
 Follow the follwing steps to train and evaluate the model on Google Cloud Platform. 
 **Note:** GCP already has Pytorch and necessary cuda dependencies hence those are not mentioned in the `requirements.txt` file.
 
+Notebook named `UI2Code.ipynb` follows the following steps for training and evaluation.
+
 1. **Clone the repository**
 
 2. **Install the dependencies**
