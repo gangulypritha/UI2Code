@@ -95,6 +95,3 @@ targets = [ids_to_tokens(vocab, target) for target in targets]
 bleu = corpus_bleu([[target] for target in targets], predictions,
                    smoothing_function=SmoothingFunction().method4)
 print("BLEU score: {}".format(bleu))
-
-generate_visualization_object(model_dir, args.viz_file_name, data_loader.dataset, predictions, targets)
-print("Predictions, targets combined into a pkl object!")
