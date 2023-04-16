@@ -1,6 +1,6 @@
 # UI2Code implementation
 
-A machine learning (ML) model that translates a screenshot of a UI of a website to its corresponding code representation. Inspired by the original [pix2code](https://github.com/tonybeltramelli/pix2code) problem and dataset.
+Inspired by the original [pix2code](https://github.com/tonybeltramelli/pix2code) problem and dataset which translates a screenshot of a UI of a website to its corresponding code representation. 
 This PyTorch codebase has used Timo Angerer and Marvin Knoll (@[marvinknoll](https://github.com/marvinknoll))'s university project (https://github.com/timoangerer/pix2code-pytorch) as a reference.
 
 ## Setup and run the model
