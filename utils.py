@@ -101,7 +101,7 @@ def ids_to_tokens(vocab, ids):
 
     return tokens
 
-def generate_visualization_object(model_dir, dataset, predictions, targets):
+def generate_visualization_object(model_dir, viz_file_name, dataset, predictions, targets):
     vis_obj = dict()
 
     vis_obj["predictions"] = predictions
@@ -109,5 +109,5 @@ def generate_visualization_object(model_dir, dataset, predictions, targets):
     vis_obj["targets_filepaths"] = [Path(dataset.data_path, filename).absolute(
     ).with_suffix(".png") for filename in dataset.filenames]
 
-    with open(os.path.join(model_dir, "viz_obj.pkl"), "wb") as writer:
+    with open(os.path.join(model_dir, viz_file_name), "wb") as writer:
         pickle.dump(vis_obj, writer, protocol=pickle.HIGHEST_PROTOCOL)
