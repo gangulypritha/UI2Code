@@ -44,6 +44,7 @@ num_layers = args.num_layers
 
 assert os.path.exists(args.model_file_path)
 loaded_model = torch.load(args.model_file_path)
+model_dir = os.path.dirname(args.model_file_path)
 
 vocab = loaded_model["vocab"]
 
@@ -93,5 +94,5 @@ bleu = corpus_bleu([[target] for target in targets], predictions,
                    smoothing_function=SmoothingFunction().method4)
 print("BLEU score: {}".format(bleu))
 
-generate_visualization_object(data_loader.dataset, predictions, targets)
+generate_visualization_object(model_dir, data_loader.dataset, predictions, targets)
 print("Predictions, targets combined into a pkl object! Use the visualisation notebook for insights!")
