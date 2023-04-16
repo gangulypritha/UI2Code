@@ -1,10 +1,10 @@
 # UI2Code implementation
 
 A machine learning (ML) model that translates a screenshot of a UI of a website to its corresponding code representation. Inspired by the original [pix2code](https://github.com/tonybeltramelli/pix2code) problem and dataset.
-This codebase has used Timo Angerer and Marvin Knoll (@[marvinknoll](https://github.com/marvinknoll))'s university project (https://github.com/timoangerer/pix2code-pytorch) as a reference.
+This PyTorch codebase has used Timo Angerer and Marvin Knoll (@[marvinknoll](https://github.com/marvinknoll))'s university project (https://github.com/timoangerer/pix2code-pytorch) as a reference.
 
 ## Setup and run the model
-Follow the follwing steps to train and evaluate the model on Google Cloud Platform.
+Follow the follwing steps to train and evaluate the model on Google Cloud Platform. **Note:** GCP already has Pytorch and necessary cuda dependencies hence those are not mentioned in the `requirements.txt` file.
 
 1. **Clone the repository**
 
