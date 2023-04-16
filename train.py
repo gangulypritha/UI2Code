@@ -62,7 +62,7 @@ print("Created data loader")
 # Creating the models
 embed_size = args.embed_size
 hidden_size = args.hidden_size
-num_layers = args.nun_layers
+num_layers = args.num_layers
 lr = args.lr
 
 encoder = Encoder(embed_size)
