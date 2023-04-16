@@ -17,7 +17,8 @@ Follow the follwing steps to train and evaluate the model on Google Cloud Platfo
 
 3. **Dataset**
 
-    Unzip `data.zip` to find 3 datasets, D1, D2 and D3, in the folder named `data`
+    Unzip `data.zip` to find 3 datasets, D1, D2 and D3, in the folder named `data`.
+    Link for the data (https://drive.google.com/file/d/1IU42LKAk32yFPAiTt4d2F7FZmqo1Ug0G/view?usp=share_link)
 
     The folder structure of the `data` looks like:
 
