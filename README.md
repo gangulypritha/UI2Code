@@ -48,6 +48,7 @@ Follow the follwing steps to train and evaluate the model on Google Cloud Platfo
 6. **Model Architecture**
 
     An Encoder-Decoder architecture is used for modelling this problem.
+    
     **Encoder:** Pretrained ResNet-152 without the last layer is used as a feature extractor backbone. The last classification layer is replaced with FC layer based on the embedding size.
     Embedding Size used : 256
 
