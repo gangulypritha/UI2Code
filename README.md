@@ -51,10 +51,16 @@ Follow the follwing steps to train and evaluate the model on Google Cloud Platfo
 
     An Encoder-Decoder architecture is used for modelling this problem.
     
-    **Encoder:** Pretrained ResNet-152 without the last layer is used as a feature extractor backbone. The last classification layer is replaced with FC layer based on the embedding size.
+    **Encoder:** Pretrained ResNet-152 without the last layer is used as a CNN-based feature extractor backbone. The last classification layer is replaced with FC layer based on the embedding size.
     Embedding Size used : 256
 
-    **Decoder:**
+    **Decoder:** At its core, the decoder constitutes a LSTM network. 
+    Hidden Layer size: 512
+    Number of recurrent Layers = 1
+    The encoder output (i.e., the image features), is concatenated with the token embeddings, which are fed as inputs to the decoder. The decoder then learns to predict the next token in the sequence one by one until it detects the end of the sequence.
+    To predict the token at time step `t`, the model receives the image features, as well as the embedding of the previous token (at time step `t-1`), as an additional context. During training, embedding of the token at the `t-1` position in the ground-truth sequence is fed to facilitate faster convergence. However, during inference, the decoder's output at time step `t-1` is fed as input to the decoder at time step `t`.
+    At `t=0`, the token embeddings are initialized randomly. One can improve this initialization by using pretrained embeddings from transformer-based models. 
+    Another area of improvement is to increase the context window, which is currently set to `1`.
 
 7. **Train the model**
 
