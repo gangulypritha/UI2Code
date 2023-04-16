@@ -73,7 +73,7 @@ Follow the follwing steps to train and evaluate the model on Google Cloud Platfo
 
     Run the following command to evaluate the model:
 
-        python evaluate.py --data_path=./data/D1/input --model_file_path=<path_to_model_file> --split=validation
+        python evaluate.py --data_path=./data/D1/input --model_file_path=<path_to_model_file> --split=test --viz_file_name=viz_obj.pkl
 
     To visualize the results of the model evaluation, run `visualize_inference.ipynb`.
 
