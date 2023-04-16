@@ -56,9 +56,9 @@ Follow the follwing steps to train and evaluate the model on Google Cloud Platfo
 
 7. **Train the model**
 
-    Run the following command to train the model. Checkpoints are saved in `./models/` directory:
+    Run the following command to train the model:
 
-        python train.py --data_path=./data/D1/input --epochs=50 --save_after_epochs=10 --batch_size=4 --split=train
+        python train.py --data_path=./data/D1/input --epochs=50 --save_after_epochs=10 --batch_size=4 --split=train --models_dir=./models/D1/
 
 8. **Evaluate the model**
 
