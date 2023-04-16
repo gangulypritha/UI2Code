@@ -30,8 +30,8 @@ Follow the follwing steps to train and evaluate the model on Google Cloud Platfo
 
 4. **Split the dataset**
 
-    The `train.py` and `evaluate.py` scripts assume the existence of three data split files `train_dataset.txt`, `test_dataset.txt`, and `validation_dataset.txt`, each containing the IDs of the data examples for the respective data split. The data split files have to be at the same folder level as the folder containing the data examples.
-    60-20-20 rule is applied for splitting the dataset into train-val-test splits.
+    The `train.py` and `evaluate.py` scripts assume the existence of 2 data split files `train_dataset.txt` and `test_dataset.txt`, each containing the IDs of the data examples for the respective data split. The data split files have to be at the same folder level as the folder containing the data examples.
+    85--15 rule is applied for splitting the dataset into train-test splits.**Note** The current implementation doesn't use the validation set to monitor the training process or for storing the best weights.
 
     Run `split_data.py` to generate the data split files for each dataset, for e.g.:
 
