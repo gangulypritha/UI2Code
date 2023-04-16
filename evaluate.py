@@ -24,8 +24,6 @@ parser.add_argument("--hidden_size", type=int, default=512)
 parser.add_argument("--num_layers", type=int, default=1)
 parser.add_argument("--split", type=str, default="validation")
 parser.add_argument("--batch_size", type=int, default=4)
-parser.add_argument("--viz_file_name", type=str,
-                    help="Name of visualization object", required=True)
 parser.add_argument("--seed", type=int, default=2020,
                     help="The random seed for reproducing ")
 
