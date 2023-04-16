@@ -97,4 +97,4 @@ bleu = corpus_bleu([[target] for target in targets], predictions,
 print("BLEU score: {}".format(bleu))
 
 generate_visualization_object(model_dir, args.viz_file_name, data_loader.dataset, predictions, targets)
-print("Predictions, targets combined into a pkl object! Use the visualisation notebook for insights!")
+print("Predictions, targets combined into a pkl object!")
