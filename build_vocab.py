@@ -8,7 +8,7 @@ parser.add_argument("--data_path", type=str,help="Datapath")
 args = parser.parse_args()
 
 data_path = args.data_path
-vocab_output_path = os.path.join(os.path.dirname, "vocab.txt")
+vocab_output_path = os.path.join(os.path.dirname(data_path), "vocab.txt")
 
 all_tokens = dict() # dict used as ordered set since it preserves order
 for file in os.listdir(data_path):
@@ -16,7 +16,7 @@ for file in os.listdir(data_path):
     suffix = "." + file.split(".")[1]
 
     if suffix == ".gui":
-        with open(file, "r") as reader:
+        with open(os.path.join(data_path,file), "r") as reader:
             raw_data = reader.read()
             data = raw_data.replace('\n', ' ').replace(', ', ' , ').split(' ')
             data.remove('')
