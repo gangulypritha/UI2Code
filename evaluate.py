@@ -19,6 +19,9 @@ parser.add_argument("--data_path", type=str, help="Datapath")
 parser.add_argument("--cuda", action='store_true',
                     default=True, help="Use cuda or not")
 parser.add_argument("--img_crop_size", type=int, default=224)
+parser.add_argument("--embed_size", type=int, default=256)
+parser.add_argument("--hidden_size", type=int, default=512)
+parser.add_argument("--num_layers", type=int, default=1)
 parser.add_argument("--split", type=str, default="validation")
 parser.add_argument("--batch_size", type=int, default=4)
 parser.add_argument("--seed", type=int, default=2020,
@@ -35,9 +38,9 @@ use_cuda = True if args.cuda and torch.cuda.is_available() else False
 device = torch.device("cuda" if use_cuda else "cpu")
 
 # Loading the model
-embed_size = 256
-hidden_size = 512
-num_layers = 1
+embed_size = args.embed_size
+hidden_size = args.hidden_size
+num_layers = args.num_layers
 
 assert os.path.exists(args.model_file_path)
 loaded_model = torch.load(args.model_file_path)
