@@ -73,7 +73,7 @@ Notebook named `UI2Code.ipynb` follows the following steps for training and eval
 
 8. **Evaluate the model**
 
-    Run the following command to evaluate the model:
+    Run the following command to evaluate the model and calculate BLEU scores:
 
         python evaluate.py --data_path=./data/D1/input --model_file_path=<path_to_model_file> --split=test 
         
