@@ -9,9 +9,8 @@ parser.add_argument("--data_path", type=str, help="Datapath")
 args = parser.parse_args()
 data_path = args.data_path
 
-TRAIN_PERCENT = 0.6
-TEST_PERCENT = 0.2
-VALIDATION_PERCENT = 0.2
+TRAIN_PERCENT = 0.85
+VALIDATION_PERCENT = 0.15
 
 occurences_count = dict()
 for file in os.listdir(data_path):
@@ -40,14 +39,12 @@ number_of_examples = len(valid_pairs)
 print(f'Found a total of {number_of_examples} valid examples')
 
 train_split = floor(number_of_examples * TRAIN_PERCENT)
-validation_split = floor(number_of_examples * VALIDATION_PERCENT)
 test_split = floor(number_of_examples * TEST_PERCENT)
 
 train_set = valid_pairs[:train_split]
-validation_set = valid_pairs[train_split: train_split + validation_split]
-test_set = valid_pairs[train_split + validation_split:]
+test_set = valid_pairs[train_split:]
 
-dataset_splits = {"train": train_set, "validation": validation_set, "test": test_set}
+dataset_splits = {"train": train_set, "test": test_set}
 
 for key, value in dataset_splits.items():
     filepath = os.path.join(os.path.dirname(data_path), f'{key}_dataset.txt')
