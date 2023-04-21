@@ -39,7 +39,7 @@ number_of_examples = len(valid_pairs)
 print(f'Found a total of {number_of_examples} valid examples')
 
 train_split = floor(number_of_examples * TRAIN_PERCENT)
-test_split = floor(number_of_examples * TEST_PERCENT)
+test_split = floor(number_of_examples * VALIDATION_PERCENT)
 
 train_set = valid_pairs[:train_split]
 test_set = valid_pairs[train_split:]
